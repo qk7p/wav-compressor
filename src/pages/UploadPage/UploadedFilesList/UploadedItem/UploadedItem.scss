@@ -1,0 +1,86 @@
+@import "../../../../styles/index";
+
+.UploadedItem {
+  display: grid;
+
+  grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "A B C C C"
+    "D D E F G";
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+  @include roboto-14-regular;
+  color: #fff;
+  border-bottom: 1px solid $color-white-hover;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: $nets) {
+    grid-template-columns: 0.5fr 5fr 2fr 3fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "A B C D E F G";
+    justify-items: end;
+  }
+
+  &ButtonIcon {
+    svg {
+      stroke: #fff;
+    }
+    &:hover {
+      svg {
+        stroke: $color-white-hover;
+      }
+    }
+  }
+
+  &LabelIcon {
+    grid-area: A;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $color-accent-primary;
+    }
+  }
+
+  &-FileSize {
+    grid-area: C;
+    justify-self: center;
+    @media screen and (min-width: $nets) {
+    }
+    &__increased {
+      color: red;
+    }
+    &__decreased {
+      color: green;
+    }
+  }
+
+  &-FileName {
+    grid-area: B;
+    @media screen and (min-width: $nets) {
+      justify-self: start;
+    }
+  }
+
+  &-ConvertButton {
+    grid-area: E;
+  }
+  &-DownloadButton {
+    grid-area: F;
+  }
+  &-DeleteButton {
+    grid-area: G;
+  }
+
+  &-Select {
+    grid-area: D;
+  }
+
+  &:last-child {
+    margin-bottom: 93px;
+    @media screen and (min-width: $nets) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../../../styles//index";
+
+.UploadedItem {
+  &-Select {
+    padding: 5px;
+    svg {
+      fill: white;
+      transition: all 0.15s;
+    }
+    &__active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .ReactSelect {
+      &__control {
+        background-color: $background-select;
+      }
+      &__single-value {
+        color: white;
+      }
+      &__menu {
+        background-color: $background-select;
+      }
+
+      &__option {
+        &:hover {
+          background-color: $background-selected-item;
+        }
+        &--is-disabled {
+          background-color: $background-selected-item;
+        }
+        &--is-focused {
+          background-color: $background-selected-item;
+        }
+        &--is-selected {
+          background-color: $background-selected-item;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../styles/";
+
+.Button {
+  $this: &;
+  padding: 10px 30px;
+  height: max-content;
+  width: max-content;
+  color: white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: 5px;
+  outline: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  @include roboto-16-bold;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+
+  &#{$this}__disabled {
+    color: $color-disabled;
+    background-color: $color-disabled-secondary;
+    border-color: $color-disabled-secondary;
+    cursor: default;
+
+    &:hover {
+      color: $color-disabled;
+      background-color: $color-disabled-secondary;
+      border-color: $color-disabled-secondary;
+    }
+  }
+}

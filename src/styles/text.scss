@@ -1,0 +1,98 @@
+$base-font-family: "Roboto", sans-serif;
+
+
+@mixin roboto-8-regular {
+  font-family: $base-font-family;
+  font-size: 8px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-12-regular {
+  font-family: $base-font-family;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-14-regular {
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-16-regular {
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-20-regular {
+  font-family: $base-font-family;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-24-regular {
+  font-family: $base-font-family;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-28-medium {
+  font-family: $base-font-family;
+  font-size: 28px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-14-bold {
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-16-bold {
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-20-bold {
+  font-family: $base-font-family;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-24-bold {
+  font-family: $base-font-family;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin roboto-28-bold {
+  font-family: $base-font-family;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.25;
+}

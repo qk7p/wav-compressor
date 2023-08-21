@@ -1,0 +1,129 @@
+@import "../../../../styles/index";
+
+.UploadedFilesListHeader {
+  display: grid;
+
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 5px 5px;
+
+  grid-template-areas:
+    "C C C C"
+    "D E F G";
+  justify-items: center;
+  align-items: center;
+  @include roboto-14-regular;
+  color: white;
+  padding-bottom: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-primary;
+  z-index: 101;
+
+  @media screen and (min-width: $nets) {
+    grid-template-areas:
+      "A A B C C C C"
+      "A A B D E F G";
+    grid-template-columns: 0.5fr 5fr 2fr 3fr 0.5fr 0.5fr 0.5fr;
+    z-index: 101;
+    position: static;
+    background-color: $background-secondary;
+  }
+
+  &-FileName {
+    display: none;
+    @include roboto-20-regular;
+    grid-area: A;
+    color: $color-text-secondary;
+    @media screen and (min-width: $nets) {
+      display: block;
+    }
+  }
+  &-FileSize {
+    display: none;
+    justify-self: center;
+    grid-area: B;
+    @include roboto-20-regular;
+    color: $color-text-secondary;
+    @media screen and (min-width: $nets) {
+      display: block;
+    }
+  }
+  &-LabelToAll {
+    grid-area: C;
+    color: $color-text-secondary;
+  }
+  &-SelectToAll {
+    margin: 5px;
+    width: 80%;
+    grid-area: D;
+  }
+
+  &-IconButton {
+    @media screen and (min-width: $nets) {
+      justify-self: end;
+    }
+
+    svg {
+      width: 24px;
+      stroke: white;
+    }
+    &:hover {
+      svg {
+        stroke: $color-white-hover;
+      }
+    }
+  }
+
+  &-ConvertAllButton {
+    grid-area: E;
+  }
+  &-DownloadAllButton {
+    grid-area: F;
+  }
+  &-DeleteAllButton {
+    grid-area: G;
+  }
+
+  &-Select {
+    padding: 5px;
+    svg {
+      fill: white;
+      transition: all 0.15s;
+    }
+    &__active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .ReactSelect {
+      color: white;
+      &__control {
+        background-color: $background-select;
+      }
+      &__single-value {
+        color: white;
+      }
+      &__menu {
+        background-color: $background-select;
+      }
+
+      &__option {
+        &:hover {
+          background-color: $background-selected-item;
+        }
+        &--is-disabled {
+          background-color: $background-selected-item;
+        }
+        &--is-focused {
+          background-color: $background-selected-item;
+        }
+        &--is-selected {
+          background-color: $background-selected-item;
+        }
+      }
+    }
+  }
+}

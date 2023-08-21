@@ -1,0 +1,12 @@
+@import "../../../styles//index";
+
+.UploadedFilesList {
+  max-width: 800px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-secondary;
+  box-shadow: $shadow-primary;
+}

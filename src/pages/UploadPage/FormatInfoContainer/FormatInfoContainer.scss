@@ -1,0 +1,40 @@
+@import "../../../styles/index";
+
+.FormatInfoContainer {
+  max-width: 800px;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $background-secondary;
+  box-shadow: $shadow-primary;
+  @media screen and (min-width: $tabs) {
+    padding: 25px;
+  }
+
+  svg {
+    fill: $color-accent-primary;
+    width: 100%;
+  }
+
+  p {
+    @include roboto-12-regular;
+    color: #fff;
+    text-indent: 20px;
+    @media screen and (min-width: $tabs) {
+      @include roboto-16-regular;
+    }
+  }
+
+  h3 {
+    color: #fff;
+    margin: 10px;
+    @include roboto-14-bold;
+    @media screen and (min-width: $tabs) {
+      @include roboto-20-bold;
+    }
+  }
+}
